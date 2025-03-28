@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <div id="product-list"></div>
+
+    <script>
+        const products = [
+            { name: "Laptop", price: 800 },
+            { name: "Phone", price: 500 },
+            { name: "Table", price: 200 },
+            { name: "Chair", price: 100 },
+            { name: "Headphones", price: 50 },
+            { name: "Shoes", price: 70 },
+            { name: "Jacket", price: 120 },
+            { name: "Watch", price: 250 },
+            { name: "Backpack", price: 90 },
+            { name: "Sofa", price: 600 }
+        ];
+
+        const productListDiv = document.getElementById("product-list");
+
+        products.forEach(product => {
+            const productItem = document.createElement("p");
+           productItem.textContent += `Product: ${product.name}, Price: $${product.price}`;
+           productListDiv.appendChild(productItem);
+        });
+    </script>
+</body>
+</html>
